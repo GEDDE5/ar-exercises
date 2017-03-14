@@ -11,12 +11,11 @@ puts "Exercise 8"
 puts "----------"
 
 class Employee < ActiveRecord::Base
-  after_create :set_password
+  before_save :set_password
 
   private
   def set_password
     self.password = Randomstring.generate(8)
-    self.save
   end
 end
 
