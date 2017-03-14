@@ -1,10 +1,11 @@
 require 'pry' # in case you want to use binding.pry
 require 'active_record'
+require 'randomstring'
 require_relative 'lib/store'
 require_relative 'lib/employee'
 
 # Output messages from Active Record to standard out
-ActiveRecord::Base.logger = Logger.new(STDOUT)
+# ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 puts 'Establishing connection to database ...'
 ActiveRecord::Base.establish_connection(
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define do
     table.references :store
     table.column :first_name, :string
     table.column :last_name, :string
+    table.column :password, :string
     table.column :hourly_rate, :integer
     table.timestamps null: false
   end

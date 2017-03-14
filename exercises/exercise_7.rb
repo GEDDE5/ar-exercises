@@ -16,7 +16,7 @@ class Store < ActiveRecord::Base
 
   def check_errors
     if self.errors.size > 0
-      puts "Errors found"
+      puts "Errors found - Store not created"
       self.errors.each do | attr, message |
         puts "#{attr} field: #{message}"
       end
