@@ -14,12 +14,12 @@ class Store < ActiveRecord::Base
   has_many :employees
 
   @store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
-  @store1.employees.create(first_name: "Donald", last_name: "T", hourly_rate: 60)
-  @store1.employees.create(first_name: "Trump", last_name: "D", hourly_rate: 60)
+  @store1.employees.create(first_name: "Donald", last_name: "T", hourly_rate: 10)
+  @store1.employees.create(first_name: "Trump", last_name: "D", hourly_rate: 80)
 
-  @store2.employees.create(first_name: "Justin", last_name: "T", hourly_rate: 60)
-  @store2.employees.create(first_name: "Trudeau", last_name: "J", hourly_rate: 60)
-  @store2.employees.create(first_name: "Christy", last_name: "C", hourly_rate: 60)
+  @store2.employees.create(first_name: "Justin", last_name: "T", hourly_rate: 100)
+  @store2.employees.create(first_name: "Trudeau", last_name: "J", hourly_rate: 25)
+  @store2.employees.create(first_name: "Christy", last_name: "C", hourly_rate: 42)
 
 end
 
